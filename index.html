@@ -26,9 +26,12 @@
   
 
 
-  <!-- Add my own CSS and JavaScript files here -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/scripts.js"></script>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 </head>
 <body>
   <!-- Navigation -->
@@ -315,34 +318,24 @@
       <h3 class="skill-heading"><span>Codespiration</span> <span class="for-icon"><i class="fa fa-lightbulb-o animate__animated"></i></span></h3>
       <img src="images/skills astronaut 1.png" alt="Codespiration" class="codespiration" />
     </div>
-    <blockquote>
-      
-      <footer>
-        <p class="mb-0">"Talk is cheap. Show me the code." <span>- Linus Torvalds</span></p>
-      </footer>
-    </blockquote>
-    <blockquote>
-      
-      <footer>
-        <p class="mb-0">"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." <span>- Martin Fowler</span></p>
-      </footer>
-     
-    </blockquote>
-    <blockquote>
-      <footer>
-        <p class="mb-0">"The function of good software is to make the complex appear to be simple." <span>- Grady Booch</span></p>
-      </footer>
-    </blockquote>
-    <blockquote>
-      <footer>
-        <p class="mb-0">"The best way to predict the future is to invent it." <span>- Alan Kay</span></p>
-      </footer>
-    </blockquote>
-    <blockquote>
-      <footer>
-        <p class="mb-0">"A good programmer is someone who always looks both ways before crossing a one-way street." <span>- Doug Linder</span></p>
-      </footer>
-    </blockquote>
+
+    <div class="">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><p>"Talk is cheap. Show me the code." <span>Linus Torvalds</span></p></div>
+          <div class="swiper-slide"><p>"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." <span>Martin Fowler</span></p></div>
+          <div class="swiper-slide"><p>"The function of good software is to make the complex appear to be simple." <span>Grady Booch</span></p></div>
+          <div class="swiper-slide"><p>"The best way to predict the future is to invent it." <span>Alan Kay</span></p></div>
+          <div class="swiper-slide"><p>"A good programmer is someone who always looks both ways before crossing a one-way street." <span>Doug Linder</span></p></div>
+          <div class="swiper-slide"><p>"The best thing about a boolean is even if you are wrong, you are only off by a bit." <span>Anonymous</span></p></div>
+          <div class="swiper-slide"><p>"Programs must be written for people to read, and only incidentally for machines to execute." <span>Harold Abelson</span></p></div>
+          <div class="swiper-slide"><p>"Give a man a program, frustrate him for a day. Teach a man to program, frustrate him for a lifetime." <span>Muhammad Waseem</span></p></div>
+          <div class="swiper-slide"><p>"Don’t worry if it doesn’t work right. If everything did, you’d be out of a job." <span>Mosher’s Law of Software Engineering</span></p></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    
   </section>
 
 
@@ -368,7 +361,10 @@
     </div>
   </footer>
   
-
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="js/scripts.js"></script>
 
 </body>
 </html>

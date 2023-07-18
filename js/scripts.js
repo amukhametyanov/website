@@ -74,3 +74,14 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(document.querySelector('.fa-lightbulb-o'));
   });
   
+
+  // swiperJS
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
