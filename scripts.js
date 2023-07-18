@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // menu related code --start
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const navMenu = document.querySelector('nav ul');
     const header = document.querySelector('.sticky-header');
-  
+
     // dynamically calculates the submenu's height
     function setMenuHeight() {
       if (navMenu.classList.contains('show')) {
@@ -13,25 +14,35 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function closeMenu() {
-        mobileMenuButton.classList.remove('active');
-        navMenu.classList.remove('show');
-        setMenuHeight();
+      mobileMenuButton.classList.remove('active');
+      navMenu.classList.remove('show');
+      setMenuHeight();
+      // Remove the document-level click event listener when the menu is closed
+      document.removeEventListener('click', documentClickListener);
+    }
+
+    function documentClickListener(event) {
+      if (!header.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+        closeMenu();
       }
-  
+    }
+
     mobileMenuButton.addEventListener('click', function () {
       mobileMenuButton.classList.toggle('active');
       navMenu.classList.toggle('show');
       setMenuHeight();
+      // Add the document-level click event listener when the menu is expanded
+      if (navMenu.classList.contains('show')) {
+        document.addEventListener('click', documentClickListener);
+      } else {
+        document.removeEventListener('click', documentClickListener);
+      }
     });
 
-    document.addEventListener('click', function (event) {
-        if (!header.contains(event.target) && !mobileMenuButton.contains(event.target)) {
-          closeMenu();
-        }
-      });
-  
     // Set initial max-height based on the current state of the menu
     setMenuHeight();
+
+    // menu related code --end
 
     // animate category names, when user scrolls to them
     var observer = new IntersectionObserver(function(entries) {
