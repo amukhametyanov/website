@@ -72,7 +72,14 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(document.querySelector('.fa-sharp'));
     observer.observe(document.querySelector('.fa-envelopes-bulk'));
     observer.observe(document.querySelector('.fa-lightbulb-o'));
-  });
+
+
+
+  }); // end of DOMContentLoaded
+
+
+  
+  
   
 
   // swiperJS
@@ -84,4 +91,22 @@ document.addEventListener('DOMContentLoaded', function () {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 15
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 15
+      },
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 20
+      },
+      1100: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+    }
   });

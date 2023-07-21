@@ -40,6 +40,7 @@
     margin-bottom: 25px;
   }
   .section-name > h3 {
+    font-family: 'Graduate', cursive;
     font-size: 2rem;
     margin-right: 10px;
   }
@@ -47,6 +48,12 @@
     width: 100px;
     height: auto;
     float: right; /* Add this line */
+  }
+
+  @media (max-width: 576px) {
+    .section-name > h3 {
+      font-size: 23px;
+    }
   }
   
   /* Navigation */
@@ -64,6 +71,7 @@
     padding: 1rem 2rem;
     background-color: #212121;
     position: relative;
+    font-family: 'Graduate', cursive;
   }
 
   nav .desktop-menu {
@@ -131,6 +139,11 @@
   }
 
   /* media queries for nav */
+  @media (min-width: 768px) {
+    nav ul li a:hover {
+      color: #a6a6a6;
+    }
+  }
   @media screen and (max-width: 767px) {
     /* Navigation */
     nav ul {
@@ -196,6 +209,8 @@
   }
   
   .hero h1 {
+    font-family: 'Graduate', cursive;
+    border: 5px solid;
     font-size: 3rem;
     text-align: center;
     line-height: 1;
@@ -209,8 +224,9 @@
     border-radius: 5px;
   }
   
-  .hero h2 {
-    font-size: 2.5rem;
+  .hero h2.prof-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.6rem;
     margin-top: 1rem;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -245,11 +261,12 @@
   }
   
   .learn-more-link {
+    font-family: 'Press Start 2P', cursive;
     color: #fff;
     text-decoration: none;
     transition: color 0.2s;
     opacity: .7;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 2px;
     text-align: center;
     line-height: 1;
@@ -293,6 +310,7 @@
 }
 
 /* this leaves 65px on top reserved for sticky nav menu, when page uses smooth scroll */
+
 #skills {
   display: block;
   height: 95px; /* The height of your sticky nav bar */
@@ -300,6 +318,7 @@
   visibility: hidden;
 }
 
+/* start aimation for section name */
 @keyframes deformation {
   0% {
     transform: scaleX(1);
@@ -326,9 +345,83 @@
   animation-delay: .4s;
 }
 
+/* end of animation for section title */
+
+/* animation for the stroke of the SVG path to make it look like the outline of the circle is growing */
+@keyframes grow-100 {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes grow-95 {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 5;
+  }
+}
+@keyframes grow-90 {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 10;
+  }
+}
+@keyframes grow-85 {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 15;
+  }
+}
+@keyframes grow-80 {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 20;
+  }
+}
+@keyframes grow-75 {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 25;
+  }
+}
 
 
-
+.circle {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  
+}
+.circle-100 {
+  animation: grow-100 2s forwards;
+}
+.circle-95 {
+  animation: grow-95 2s forwards;
+}
+.circle-90 {
+  animation: grow-90 2s forwards;
+}
+.circle-85 {
+  animation: grow-85 2s forwards;
+}
+.circle-80 {
+  animation: grow-80 2s forwards;
+}
+.circle-75 {
+  animation: grow-75 2s forwards;
+}
+/* end of animation for the stroke of the SVG path to make it look like the outline of the circle is growing */
 
 
 .skills h2 {
@@ -356,7 +449,9 @@
   }
 
 .skills .skill-name {
+  font-family: 'Press Start 2P', cursive;
   font-weight: bold;
+  font-size: 12px;
 }
 
 .skills .skill-percentage {
@@ -506,6 +601,7 @@
   }
   
   .about-text h2 {
+    font-family: 'Graduate', cursive;
     font-size: 24px;
     margin-bottom: 10px;
   }
@@ -692,35 +788,88 @@
     background-color: rgba(33, 33, 33, .95);
   }
   
-.img-fluid {
-  width: 100%;
+.swiper.mySwiper {
+  padding-bottom: 45px;
 }
-
+.swiper-slide {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+.swiper-slide > .bg-img {
+  height: 315px;
+  background-image: url(../images/parchment-bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
  .smart-quote {
   position: absolute;
   height: 100%;
   width: 100%;
-  padding: 25px 15px;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+  padding: 25px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  cursor: pointer;
  }
  .smart-quote > p.quote {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.5rem;
+  font-family: 'Mynerve', cursive;
+  font-size: 23px;
   margin-bottom: auto;
   margin-top: auto;
-  width: 100%;
+  text-align: justify;
  }
  .smart-quote > p.author {
   letter-spacing: 1px;
   font-style: italic;
+  width: 100%;
+  text-align: right;
  }
+
+ .swiper-pagination-bullet {
+  background: #c4c4c4 !important; /* color for inactive bullets */
+  opacity: 1; /* make sure the bullets are visible */
+  width: 8px; /* adjust as needed */
+  height: 8px; /* adjust as needed */
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffffff !important; /* color for active bullet */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* adjust shadow as needed */
+}
+
+  @media (max-width: 1100px) {
+    .swiper.mySwiper {
+      margin-left: -31px;
+      margin-right: -31px
+    }
+  }
 
   @media (max-width: 768px) {
     .testimonials {
       padding: 2rem 1.5rem;
+    }
+    .swiper.mySwiper {
+      margin-left: -22px;
+      margin-right: -22px
+    }
+  }
+
+  @media (max-width: 576px) {
+    .swiper.mySwiper {
+      padding-right: 15px;
+    }
+    .first-slide {
+      margin-left: 15px;
+    }
+    .smart-quote {
+      padding: 20px;
+    }
+    .swiper-slide > .bg-img {
+      height: 270px;
+    }
+    .smart-quote > p.quote {
+      font-size: 20px;
+      line-height: 1.4;
     }
   }
 
