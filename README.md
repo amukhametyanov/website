@@ -8,6 +8,7 @@ This is my personal portfolio website which showcases my skills, experiences, an
 
 The project structure is as follows:
 
+```
 .
 ├── index.html
 ├── css
@@ -15,9 +16,10 @@ The project structure is as follows:
 ├── js
 │ └── scripts.js
 └── images
-├── profile-photo.jpg
-├── project1.jpg
-└── project2.jpg
+    ├── profile-photo.jpg
+    ├── project1.jpg
+    └── project2.jpg
+```
 
 
 - `index.html` is the main HTML file.
