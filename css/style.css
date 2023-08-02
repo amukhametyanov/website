@@ -282,15 +282,7 @@
   }
 
   /* media queries for header */
-  @media (max-width: 768px) {
-    .hero {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/tablet web developers room.png');
-    }
-  }
   @media (max-width: 576px) {
-    .hero {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/mobile web developers room 1.png');
-    }
     .hero h1 {
         font-size: 2.7rem;
       }
@@ -487,6 +479,98 @@
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
   }
+
+
+  /* switching tabs for skills section */
+  .tabs {
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    /* border-bottom: 1px solid hsl(0 0% 30%); */
+    width: fit-content;
+    }
+
+    .tabs::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 4px;
+      scale: var(--_width, 0.333) 1;
+      translate: var(--_left, 0) 0;
+      transform-origin: left;
+      transition: scale 200ms, translate 200ms;
+      background: #fff;
+    }
+   
+    .tab {
+      padding: 1rem 2rem;
+      cursor: pointer;
+      min-width: 0% !important;
+      text-align: center;
+      vertical-align: bottom;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      border: none;
+      /* margin-right: 10px; */
+      color: #a6a6a6;
+      background: transparent;
+    }
+    .tab.active {
+      color: #fff;
+    }
+    
+    .content {
+      border-top: 1px solid hsl(0 0% 30%);
+    }
+    .tab:focus {
+      outline: none !important;
+    }
+    
+    .tabcontent {
+    padding: 20px 0;
+    border-top: none;
+    display: none;
+    }
+    
+    .tabcontent.active {
+    display: block;
+    animation: fadein 0.5s;
+    }
+    
+    
+    @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+    }
+    
+    /* @media (max-width: 1023.8px) {
+      .tabs,
+      .content {
+          margin: 0 -20px;
+      }
+    } */
+    @media (min-width: 576px) {
+      .skills .skill-name {
+        margin-right: 10px;
+      }
+      
+    }
+    @media (max-width: 576px) {
+      .tabs .tab {
+          min-width: 95px;
+          font-size: 12px;
+      }
+      .tab {
+        padding: 15px;
+      }
+      
+      .tabs > p {
+          font-size: 10px;
+      }
+    }
 
 
   /* glowing effect around cards */

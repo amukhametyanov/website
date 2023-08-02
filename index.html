@@ -22,12 +22,6 @@
 
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   
 
 
@@ -94,166 +88,180 @@
       <img src="images/about me astronaut 1.png" alt="Dev Skills" class="skills-avatar" />
     </div>
     
-    <ul>
-        <li>
-            <div class="skill-card">
-                    <span class="skill-name">HTML</span>
-                    <div class="skill-percentage">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                            fill="none"
-                            stroke="#333"
-                            stroke-width="2"
-                            stroke-dasharray="100, 100"
-                        ></path>
-                        <path class="circle circle-100"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                            fill="none"
-                            stroke="#fff"
-                            stroke-width="2"
-                            stroke-dasharray="95, 100" 
-                            stroke-linecap="round"
-                        ></path>
-                        <text x="18" y="19" text-anchor="middle" fill="#fff" font-size="11px" dy=".3em">100%</text>
-                    </svg>
-                    </div>
-            </div>
-            
-          </li>
+    <div class="tabs flex-wrap">
+      <button class="tab active" onclick="changeTab(0, this)">Front-End</button>
+      <button class="tab" onclick="changeTab(1, this)">Back-End</button>
+      <button class="tab" onclick="changeTab(2, this)">Full-Stack</button>
+    </div>
 
-          <li>
-            <div class="skill-card">
-                    <span class="skill-name">CSS/SCSS</span>
-                    <div class="skill-percentage">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                            fill="none"
-                            stroke="#333"
-                            stroke-width="2"
-                            stroke-dasharray="100, 100"
-                        ></path>
-                        <path class="circle circle-90"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                            fill="none"
-                            stroke="#fff"
-                            stroke-width="2"
-                            stroke-dasharray="90, 100" 
-                            stroke-linecap="round"
-                        ></path>
-                        <text x="18" y="19" text-anchor="middle" fill="#fff" font-size="11px" dy=".3em">90%</text>
-                    </svg>
-                    </div>
-            </div>
-            
-          </li>
-
-          <li>
-            <div class="skill-card">
-                    <span class="skill-name">Javascript</span>
-                    <div class="skill-percentage">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                            fill="none"
-                            stroke="#333"
-                            stroke-width="2"
-                            stroke-dasharray="100, 100"
-                        ></path>
-                        <path class="circle circle-90"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                            fill="none"
-                            stroke="#fff"
-                            stroke-width="2"
-                            stroke-dasharray="85, 100" 
-                            stroke-linecap="round"
-                        ></path>
-                        <text x="18" y="19" text-anchor="middle" fill="#fff" font-size="11px" dy=".3em">90%</text>
-                    </svg>
-                    </div>
-            </div>
-           
-          </li>
-
-          <li>
-            <div class="skill-card">
-                    <span class="skill-name">React</span>
-                    <div class="skill-percentage">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                            fill="none"
-                            stroke="#333"
-                            stroke-width="2"
-                            stroke-dasharray="100, 100"
-                        ></path>
-                        <path class="circle circle-85"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                            fill="none"
-                            stroke="#fff"
-                            stroke-width="2"
-                            stroke-dasharray="85, 100" 
-                            stroke-linecap="round"
-                        ></path>
-                        <text x="18" y="19" text-anchor="middle" fill="#fff" font-size="11px" dy=".3em">85%</text>
-                    </svg>
-                    </div>
-            </div>
-            
-          </li>
-
-          <li>
-            <div class="skill-card">
-                    <span class="skill-name">Node.js</span>
-                    <div class="skill-percentage">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
-                        <path class="circle-bg"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                            fill="none"
-                            stroke="#333"
-                            stroke-width="2"
-                            stroke-dasharray="100, 100"
-                        ></path>
-                        <path class="circle circle-75"
-                            d="M18 2.0845
-                                a 15.9155 15.9155 0 0 1 0 31.831
-                                a 15.9155 15.9155 0 0 1 0 -31.831"
-                            fill="none"
-                            stroke="#fff"
-                            stroke-width="2"
-                            stroke-dasharray="85, 100" 
-                            stroke-linecap="round"
-                        ></path>
-                        <text x="18" y="19" text-anchor="middle" fill="#fff" font-size="11px" dy=".3em">75%</text>
-                    </svg>
-                    </div>
-            </div>
-            
-          </li>
-          
-         
+    <div class="content">
+      <div id="frontEnd" class="tabcontent active">
+            <ul>
+              <li>
+                  <div class="skill-card">
+                          <span class="skill-name">HTML</span>
+                          <div class="skill-percentage">
+                          <svg viewBox="0 0 36 36" class="circular-chart">
+                              <path class="circle-bg"
+                                  d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  fill="none"
+                                  stroke="#333"
+                                  stroke-width="2"
+                                  stroke-dasharray="100, 100"
+                              ></path>
+                              <path class="circle circle-100"
+                                  d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  fill="none"
+                                  stroke="#fff"
+                                  stroke-width="2"
+                                  stroke-dasharray="95, 100" 
+                                  stroke-linecap="round"
+                              ></path>
+                              <text x="18" y="19" text-anchor="middle" fill="#fff" font-size="11px" dy=".3em">100%</text>
+                          </svg>
+                          </div>
+                  </div>
+                  
+                </li>
       
+                <li>
+                  <div class="skill-card">
+                          <span class="skill-name">CSS/SCSS</span>
+                          <div class="skill-percentage">
+                          <svg viewBox="0 0 36 36" class="circular-chart">
+                              <path class="circle-bg"
+                                  d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  fill="none"
+                                  stroke="#333"
+                                  stroke-width="2"
+                                  stroke-dasharray="100, 100"
+                              ></path>
+                              <path class="circle circle-90"
+                                  d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  fill="none"
+                                  stroke="#fff"
+                                  stroke-width="2"
+                                  stroke-dasharray="90, 100" 
+                                  stroke-linecap="round"
+                              ></path>
+                              <text x="18" y="19" text-anchor="middle" fill="#fff" font-size="11px" dy=".3em">90%</text>
+                          </svg>
+                          </div>
+                  </div>
+                  
+                </li>
       
-    </ul>
+                <li>
+                  <div class="skill-card">
+                          <span class="skill-name">Javascript</span>
+                          <div class="skill-percentage">
+                          <svg viewBox="0 0 36 36" class="circular-chart">
+                              <path class="circle-bg"
+                                  d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  fill="none"
+                                  stroke="#333"
+                                  stroke-width="2"
+                                  stroke-dasharray="100, 100"
+                              ></path>
+                              <path class="circle circle-90"
+                                  d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  fill="none"
+                                  stroke="#fff"
+                                  stroke-width="2"
+                                  stroke-dasharray="85, 100" 
+                                  stroke-linecap="round"
+                              ></path>
+                              <text x="18" y="19" text-anchor="middle" fill="#fff" font-size="11px" dy=".3em">90%</text>
+                          </svg>
+                          </div>
+                  </div>
+                
+                </li>
+      
+                <li>
+                  <div class="skill-card">
+                          <span class="skill-name">React</span>
+                          <div class="skill-percentage">
+                          <svg viewBox="0 0 36 36" class="circular-chart">
+                              <path class="circle-bg"
+                                  d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  fill="none"
+                                  stroke="#333"
+                                  stroke-width="2"
+                                  stroke-dasharray="100, 100"
+                              ></path>
+                              <path class="circle circle-85"
+                                  d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  fill="none"
+                                  stroke="#fff"
+                                  stroke-width="2"
+                                  stroke-dasharray="85, 100" 
+                                  stroke-linecap="round"
+                              ></path>
+                              <text x="18" y="19" text-anchor="middle" fill="#fff" font-size="11px" dy=".3em">85%</text>
+                          </svg>
+                          </div>
+                  </div>
+                  
+                </li>
+      
+                <li>
+                  <div class="skill-card">
+                          <span class="skill-name">Node.js</span>
+                          <div class="skill-percentage">
+                          <svg viewBox="0 0 36 36" class="circular-chart">
+                              <path class="circle-bg"
+                                  d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  fill="none"
+                                  stroke="#333"
+                                  stroke-width="2"
+                                  stroke-dasharray="100, 100"
+                              ></path>
+                              <path class="circle circle-75"
+                                  d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  fill="none"
+                                  stroke="#fff"
+                                  stroke-width="2"
+                                  stroke-dasharray="85, 100" 
+                                  stroke-linecap="round"
+                              ></path>
+                              <text x="18" y="19" text-anchor="middle" fill="#fff" font-size="11px" dy=".3em">75%</text>
+                          </svg>
+                          </div>
+                  </div>
+                  
+                </li>
+                
+              
+            
+            
+            </ul>
+      </div>
+      <div id="backEnd" class="tabcontent"></div>
+      <div id="fullStack" class="tabcontent"></div>
+    </div>
+
+    
   </section>
 
   <!-- About -->
