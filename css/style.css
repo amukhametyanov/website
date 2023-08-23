@@ -10,7 +10,8 @@
   }
   
   body {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
     background-image: url("../images/tile 3.png");
     color: #f5f5f5;
     line-height: 1.6;
@@ -286,7 +287,7 @@
   }
   
   .learn-more-link {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
     text-decoration: none;
     transition: color 0.2s;
@@ -466,7 +467,7 @@
   }
 
 .skills .skill-name {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 12px;
 }
@@ -542,6 +543,7 @@
       /* margin-right: 10px; */
       color: #a6a6a6;
       background: transparent;
+      font-family: 'Montserrat', sans-serif;
     }
     .tab.active {
       color: #fff;
@@ -580,6 +582,7 @@
     @media (min-width: 576px) {
       .skills .skill-name {
         margin-right: 10px;
+        font-size: 14px;
       }
       
     }
