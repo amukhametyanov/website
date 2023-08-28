@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // menu related code --start
+
+    // menu related code --start ////////////////////////////////////////////////////////////////
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const navMenu = document.querySelector('nav ul');
     const header = document.querySelector('.sticky-header');
@@ -42,7 +43,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set initial max-height based on the current state of the menu
     setMenuHeight();
 
-    // menu related code --end
+    // to close mobile menu when user chooses any option from menu
+    // Get all menu items
+      const menuItems = document.querySelectorAll('nav ul li a');
+
+      // Add click event to each menu item
+      menuItems.forEach((menuItem) => {
+        menuItem.addEventListener('click', function () {
+          // Close the mobile menu when any menu item is clicked
+          if (navMenu.classList.contains('show')) {
+            closeMenu();
+          }
+        });
+      });
+
+    // menu related code --end /////////////////////////////////////////////////////////////////////////////
 
     // animate category names, when user scrolls to them
     var observer = new IntersectionObserver(function(entries) {
